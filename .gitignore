@@ -1,3 +1,4 @@
+/composer.lock
 /var/log/*
 !/var/log/.placefolder
 /var/tmp/*
