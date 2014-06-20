@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+phpunit_config_file=
+preload_script=/domain-coder/tests/bootstrap.php
+test_file_pattern=
+test_folders=/domain-coder/tests
+testing_framework=PHPUnit
