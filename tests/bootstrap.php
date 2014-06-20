@@ -1,9 +1,4 @@
 <?php
-
-use BEAR\Package\Dev\Dev;
-use Ray\Di\Injector;
-use PHPMentors\DomainCoder\Module\AppModule;
-
 error_reporting(E_ALL);
 ini_set('xdebug.max_nesting_level', 300);
 
@@ -17,6 +12,3 @@ $_ENV['APP_DIR'] = dirname(__DIR__);
 
 // clear cache files
 require $_ENV['APP_DIR'] . '/bin/clear.php';
-
-// set the resource client
-$GLOBALS['RESOURCE'] = Injector::create([new AppModule('test')])->getInstance('\BEAR\Resource\ResourceInterface');

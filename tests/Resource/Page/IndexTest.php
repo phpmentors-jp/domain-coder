@@ -1,22 +1,10 @@
 <?php
 namespace PHPMentors\DomainCoder\Resource\Page;
 
-use Ray\Di\Injector;
-use PHPMentors\DomainCoder\Module\TestModule;
+use PHPMentors\DomainCoder\Test\InjectorAwareTestCase;
 
-class IndexTest extends \PHPUnit_Framework_TestCase
+class IndexTest extends InjectorAwareTestCase
 {
-    /**
-     * @var \BEAR\Resource\ResourceInterface
-     */
-    private $resource;
-
-    protected function setUp()
-    {
-        parent::setUp();
-        $this->resource = clone $GLOBALS['RESOURCE'];
-    }
-
     /**
      * page resource
      *
@@ -25,7 +13,7 @@ class IndexTest extends \PHPUnit_Framework_TestCase
     public function resource()
     {
         // resource request
-        $page = $this->resource->get->uri('page://self/index')->eager->request();
+        $page = $this->createResource()->get->uri('page://self/index')->eager->request();
         $this->assertSame(200, $page->code);
 
         return $page;
@@ -66,7 +54,7 @@ class IndexTest extends \PHPUnit_Framework_TestCase
      */
     public function testOnGet()
     {
-        $page = $this->resource->get->uri('page://self/index')->withQuery(['name' => 'koriym'])->eager->request();
+        $page = $this->createResource()->get->uri('page://self/index')->withQuery(['name' => 'koriym'])->eager->request();
         $this->assertSame('Hello koriym', $page['greeting']);
     }
 }
