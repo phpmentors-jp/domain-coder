@@ -2,9 +2,7 @@
 
 namespace PHPMentors\DomainCoder\Module\App;
 
-use BEAR\Package;
 use Ray\Di\AbstractModule;
-use Ray\Di\Injector;
 
 class Dependency extends AbstractModule
 {

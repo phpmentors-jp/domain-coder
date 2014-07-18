@@ -1,0 +1,6 @@
+imports:
+  - parameters.yml
+
+framework:
+  named_constants:
+  signal_parameters:

@@ -2,7 +2,6 @@
 
 namespace PHPMentors\DomainCoder\Module\App;
 
-use BEAR\Package;
 use Ray\Di\AbstractModule;
 
 class Aspect extends AbstractModule

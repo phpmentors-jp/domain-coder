@@ -14,10 +14,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=5.4.0",
-        "bear/package": "dev-develop",
-        "bear/resource": "*",
-        "bear/sunday": "*",
-        "ray/di": "*"
+        "phpmentors/formal-bear": "~1.0"
     },
     "require-dev": {
         "bear/dev-package": "~0.2",
