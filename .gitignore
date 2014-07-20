@@ -1,5 +1,6 @@
 /app/config/parameters.yml
 /composer.lock
+/var/www/index.php
 /var/log/*
 !/var/log/.placefolder
 /var/tmp/*
